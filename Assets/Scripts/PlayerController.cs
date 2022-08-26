@@ -52,4 +52,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector3(0f, playerJumpSpeed, 0f), ForceMode.Impulse);
         }
     }
+
+    //WallCollision
+
 }
