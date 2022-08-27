@@ -16,6 +16,7 @@ public class TriggerWallCollision : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             wallCollider.checkCollision();
+            Destroy(other.gameObject);
         }
     }
 }

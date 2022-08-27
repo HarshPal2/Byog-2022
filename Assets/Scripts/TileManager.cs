@@ -10,7 +10,7 @@ public class TileManager : MonoBehaviour
     private float spawnZ = 0.0f;
     private float tileLength = 69.25f;
     private float safeZone = 120f;
-    private int amnTilesOnScreen = 4;
+    private int amnTilesOnScreen = 7;
     private int lastPrefabIndex = 0;
 
     private List<GameObject> activeTiles;
@@ -40,12 +40,16 @@ public class TileManager : MonoBehaviour
 
     private void SpawnTile(int prefabIndex = -1)
     {
+        int randomPrefabIndex = RandomPrefabIndex();
+
         GameObject go;
-        go = Instantiate(tilePrefabs[RandomPrefabIndex()]) as GameObject;
+        go = Instantiate(tilePrefabs[10]) as GameObject;
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * spawnZ;
-        spawnZ += tileLength;
 
+        spawnZ += tileLength;
+        
+       
         activeTiles.Add(go);
     }
 

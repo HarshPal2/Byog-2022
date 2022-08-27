@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 140918964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.32, y: -9.3, z: 30.92}
-  m_LocalScale: {x: 2.1579, y: 2.1579, z: 2.1579}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2067682231}
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd7676096dae7f42bedd9c11fef6873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerForwardMoveSpeed: 30
-  playerSidewardsMoveSpeed: 27
+  playerForwardMoveSpeed: 55
+  playerSidewardsMoveSpeed: 45
   playerIncreaseSpeed: 0.5
   playerJumpSpeed: 75
 --- !u!1 &1594200344
@@ -394,8 +394,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabs:
+  - {fileID: 6170286109332223909, guid: 273a6916797095b489a18a4b8c43c514, type: 3}
   - {fileID: 726301954629824371, guid: 521943a011eee374faed941b4bec2dd6, type: 3}
+  - {fileID: 177525600916663448, guid: ffcf5304dd460c147b87b674f0ba45ff, type: 3}
   - {fileID: 726301954629824371, guid: d3a5bbb775722784d912e0a9a5cf1fce, type: 3}
+  - {fileID: 3629653334433928998, guid: 10bb653fef7b7fb469b1f3207a1effdc, type: 3}
+  - {fileID: 5920554212840045257, guid: 4dc56041f301ff548bd4f9e52b20d204, type: 3}
+  - {fileID: 4807585446999207261, guid: 4dc6649d79bebf945aa5692166bcb047, type: 3}
+  - {fileID: 7370642827973899195, guid: 9d2da605ad5620f438d0cd18bf08e79b, type: 3}
+  - {fileID: 3390860813350833859, guid: cbe1cf5e3b75e3b43921136ff2505b10, type: 3}
 --- !u!1 &2067682228
 GameObject:
   m_ObjectHideFlags: 0

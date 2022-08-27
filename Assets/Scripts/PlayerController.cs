@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float playerIncreaseSpeed = 1f;
     public float playerJumpSpeed = 5f;
 
-    private float targetSpeed = 35f;
+    private float targetSpeed = 100f;
 
     private Rigidbody rb;
 
@@ -31,10 +31,10 @@ public class PlayerController : MonoBehaviour
     void MovePlayerForward()
     {
         //TURN IT ON LATER!
-      /* if (playerMoveSpeed < targetSpeed)
+/*        if (playerForwardMoveSpeed < targetSpeed)
         {
-            playerMoveSpeed += playerIncreaseSpeed * Time.deltaTime;
-        }*/ 
+            playerForwardMoveSpeed += playerIncreaseSpeed * Time.deltaTime;
+        }*/
 
         transform.Translate(Vector3.forward * playerForwardMoveSpeed * Time.deltaTime);
     }
