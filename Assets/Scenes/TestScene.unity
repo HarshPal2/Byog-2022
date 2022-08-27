@@ -234,8 +234,7 @@ Transform:
   m_LocalPosition: {x: 6.32, y: -9.3, z: 30.92}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2067682231}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -251,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd7676096dae7f42bedd9c11fef6873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerForwardMoveSpeed: 55
+  playerForwardMoveSpeed: 35
   playerSidewardsMoveSpeed: 45
   playerIncreaseSpeed: 0.5
   playerJumpSpeed: 75
@@ -403,6 +402,8 @@ MonoBehaviour:
   - {fileID: 4807585446999207261, guid: 4dc6649d79bebf945aa5692166bcb047, type: 3}
   - {fileID: 7370642827973899195, guid: 9d2da605ad5620f438d0cd18bf08e79b, type: 3}
   - {fileID: 3390860813350833859, guid: cbe1cf5e3b75e3b43921136ff2505b10, type: 3}
+  - {fileID: 7370642827973899195, guid: 99a05dae7d1de044184050aadc06e222, type: 3}
+  - {fileID: 3455214563503238231, guid: 543ec836e0ed89641852523bd6e69e82, type: 3}
 --- !u!1 &2067682228
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +415,7 @@ GameObject:
   - component: {fileID: 2067682231}
   - component: {fileID: 2067682230}
   - component: {fileID: 2067682229}
+  - component: {fileID: 2067682232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -480,10 +482,23 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067682228}
   m_LocalRotation: {x: 0.12599474, y: -0, z: -0, w: 0.9920309}
-  m_LocalPosition: {x: 0.04, y: 4.6, z: -7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.48, y: 9.099999, z: 2.92}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 140918969}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 14.476, y: 0, z: 0}
+--- !u!114 &2067682232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067682228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400151f943cd3f44e831632e42455395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 14.5, z: -22.9}
