@@ -6,9 +6,12 @@ public class Obs6Collision : MonoBehaviour
 {
     public GameObject roller;
     private bool collided = false;
+
+    private AudioSource rotatingAudio;
+
     void Start()
     {
-        
+        rotatingAudio = GameObject.Find("RotatingAudio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,8 @@ public class Obs6Collision : MonoBehaviour
         {
             roller.AddComponent<Rigidbody>();
             collided = true;
+
+            rotatingAudio.Play();
         }      
     }
 }

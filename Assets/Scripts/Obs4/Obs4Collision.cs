@@ -7,9 +7,11 @@ public class Obs4Collision : MonoBehaviour
     public GameObject[] arrowPrefabs;
     bool hasCollided = false;
 
+    private AudioSource rotatingAudio;
+
     void Start()
     {
-        
+        rotatingAudio = GameObject.Find("RotatingAudio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class Obs4Collision : MonoBehaviour
                 float movespeed = Random.Range(1, 30);
                 arrow.transform.localPosition += new Vector3(0f, movespeed * Time.deltaTime, movespeed * 2.34f * Time.deltaTime); 
             }
+
         }
     }
 
@@ -30,6 +33,7 @@ public class Obs4Collision : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             hasCollided = true;
+            rotatingAudio.Play();
         }
     }
 }

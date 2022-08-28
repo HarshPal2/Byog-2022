@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Obs2RevCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private AudioSource thud;
+
     void Start()
     {
-
+        thud = GameObject.Find("IronShutAudio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GetComponentInParent<Transform>().localRotation);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -22,6 +22,7 @@ public class Obs2RevCollision : MonoBehaviour
         {
             transform.localRotation = Quaternion.Euler(new Vector3(80, -90, 0));
             GetComponent<MeshCollider>().enabled = false;
+            thud.Play();
         }
     }
 }

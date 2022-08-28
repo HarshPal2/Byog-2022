@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,13 +11,18 @@ public class PlayerController : MonoBehaviour
     public float playerIncreaseSpeed = 1f;
     public float playerJumpSpeed = 5f;
 
-    private float targetSpeed = 100f;
+    private float targetSpeed = 110f;
+
+    private GamOver gameOver;
+    private bool playerGirgaya = false;
 
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        gameOver = GameObject.Find("HandleGameOver").GetComponent<GamOver>();
     }
 
     void Update()
@@ -26,15 +32,22 @@ public class PlayerController : MonoBehaviour
         ChangePlayerSides();
 
         PlayerJump();
+
+        if(transform.position.y <= -35f && !playerGirgaya)
+        {
+            gameOver.GameOverNormal();
+            playerGirgaya =true;
+            Destroy(gameObject);
+        }
     }
 
     void MovePlayerForward()
     {
         //TURN IT ON LATER!
-/*        if (playerForwardMoveSpeed < targetSpeed)
+        if (playerForwardMoveSpeed < targetSpeed)
         {
             playerForwardMoveSpeed += playerIncreaseSpeed * Time.deltaTime;
-        }*/
+        }
 
         transform.Translate(Vector3.forward * playerForwardMoveSpeed * Time.deltaTime);
     }
@@ -52,7 +65,5 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector3(0f, playerJumpSpeed, 0f), ForceMode.Impulse);
         }
     }
-
-    //WallCollision
 
 }

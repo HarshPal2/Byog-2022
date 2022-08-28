@@ -6,9 +6,11 @@ public class Obs3Collision : MonoBehaviour
 {
     public GameObject[] obsPrefab;
 
+    private AudioSource woodHitAudio;
+
     void Start()
     {
-        
+        woodHitAudio = GameObject.Find("WoodHitAudio").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,8 @@ public class Obs3Collision : MonoBehaviour
                 o.GetComponent<Rigidbody>().useGravity = false;
                 o.GetComponent<Rigidbody>().mass = 0.01f;
             }
+
+            woodHitAudio.Play();
         }
 
     }

@@ -7,6 +7,8 @@ TagManager:
   - Wall
   - Fly
   - Spike
+  - GameOver
+  - UI
   layers:
   - Default
   - TransparentFX

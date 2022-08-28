@@ -7,9 +7,11 @@ public class Obj5SpikeLogic : MonoBehaviour
     public ToggleSpikes toggleSpikebool;
     public Transform spikeTrans;
 
+    private GamOver g;
+
     void Start()
     {
-        
+        g = GameObject.Find("HandleGameOver").GetComponent<GamOver>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class Obj5SpikeLogic : MonoBehaviour
             {
                 spikeTrans.transform.position += new Vector3(0f, 3f, 0f);
                 Destroy(collision.gameObject);
+                g.GameOverNormal();
             }
         }
     }

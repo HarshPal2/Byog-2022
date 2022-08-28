@@ -5,10 +5,15 @@ using UnityEngine;
 public class TriggerWallCollision : MonoBehaviour
 {
     private WallCollision wallCollider;
+    //private AudioSource explosionSfx;
+
+    private GamOver g;
 
     private void Start()
     {
         wallCollider = GetComponentInParent<WallCollision>();
+        //explosionSfx = GameObject.Find("ExplosionAudio").GetComponent<AudioSource>();
+        g = GameObject.Find("HandleGameOver").GetComponent<GamOver>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,6 +22,7 @@ public class TriggerWallCollision : MonoBehaviour
         {
             wallCollider.checkCollision();
             Destroy(other.gameObject);
+            g.GameOverNormal();
         }
     }
 }

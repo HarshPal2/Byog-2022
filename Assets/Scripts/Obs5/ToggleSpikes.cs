@@ -14,7 +14,6 @@ public class ToggleSpikes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(isSpikeUp);
     }
 
     void checkSpikes()
@@ -34,7 +33,7 @@ public class ToggleSpikes : MonoBehaviour
 
     public IEnumerator ToggleSpikess()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1f);
 
         checkSpikes();
 
